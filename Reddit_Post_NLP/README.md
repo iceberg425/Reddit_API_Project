@@ -1,17 +1,16 @@
 
 ### Workflow:
 
-- [Problem Statement](notebooks/Classifying_Posts.ipynb#Problem Statement)
-- Data Gathering
-- Data Exploration
-- Pre-processing and Modeling
-- Model Evaluation
-- Concluding Remarks
+1. [Data Gathering](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/data_gathering.ipynb)
+2. [Data Exploration](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/EDA.ipynb)
+3. [Pre-processing and Modeling](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/Modeling.ipynb)
+4. [Model Evaluation](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/Further_Evaluation.ipynb)
+5. Concluding Remarks
 
 
 ### Problem Statment
 
-<img src="./images/TVshowsMovieswordle2b.png" alt="drawing" width="800"/>
+![alt text](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/images/TVshowsMovieswordle2b.png "Logo Title Text 1")
 
    
   For anyone familiar with television shows or movies, it is easy to identify if the Office is a TV show or not. Unlike humans, a computer cannot easily distinguish words that are associated with either a movie or TV show, or how to categorize them. However, with the appropriate training, a computer should be able to identify such words as a human does.
