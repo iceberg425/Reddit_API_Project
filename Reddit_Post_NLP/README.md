@@ -1,3 +1,5 @@
+![alt text](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/images/TVshowsMovieswordle2.png "Logo Title Text 1")
+
 
 ### Workflow:
 
@@ -9,8 +11,6 @@
 
 
 ### Problem Statment
-
-![alt text](https://github.com/iceberg425/Reddit_API_Project/blob/master/Reddit_Post_NLP/images/TVshowsMovieswordle2b.png "Logo Title Text 1")
 
    
   For anyone familiar with television shows or movies, it is easy to identify if the Office is a TV show or not. Unlike humans, a computer cannot easily distinguish words that are associated with either a movie or TV show, or how to categorize them. However, with the appropriate training, a computer should be able to identify such words as a human does.
@@ -28,19 +28,18 @@
    
    The data employed here was gathered from Reddit. We tackle the problem using movie and television subreddits. Given the restriction on the amount of data that can be retrieved per time, we collected 1231 movie posts and 2174 tv posts, making a total of 3405 posts. In more technical terms, we have 3045 documents of text data to analyze.
    
-   We employ four algorithms and several models (due to hyperparameter tuning). 
+   We employ three algorithms and several models (due to hyperparameter tuning). 
    - Logistic Regression 
-   - Naive Bayes (Multinomial)
    - Support Vector Classifier
    - Gradient Boosting Classifier
    
-   The Logistic regression returned an 80% accuracy, the Naive Bayes model returned an accuracy of 89%, the Support Vector Classifier returned an accuracy of 91%, and the Gradient Boosting classifier an accuracy of 89%. 
+   The Logistic regression returned an 83% accuracy, the Support Vector Classifier returned an accuracy of 84%, and the Gradient Boosting classifier an accuracy of 88%. 
    
-   We eventually settle for two models: the Support Vector classifier and a Gradient Boosting model. These models tend to generalize fairly well. When we take these models to unseen data, we find that they perform just as well as they did when they were trained.  
+   We eventually settle with one model: the Gradient Boosting model. This model tends to generalize fairly well. When we take this model to unseen data, we find that it performs just as well as it did when it was trained.  
    
-   Using these models leaves us with the challenge of interpretability. That is, these kind of models, unlike logistic regressions and linear regressions, do not provide us with coefficients that can be easily interpreted. If our interest is to draw inference, then a logistic regression would be our best bet here. However, since the goal is not inference but accuracy, the lack of interpretation is not much of a problem. 
+   Using this model leaves us with the challenge of interpretability. That is, these kind of models, unlike logistic regressions and linear regressions, do not provide us with coefficients that can be easily interpreted. If our interest is to draw inference, then a logistic regression would be our best bet here. However, since the goal is not inference but accuracy, the lack of interpretation is not much of a problem. 
    
-   The SVM classifier and GB model generalize well. However, the SVM classifier outperforms the GB classifier on the holdout set. Therefore, we settle on this model and recommend it for deployment for the task.  
+   The GB model generalizes well and outperforms the Logistic Regression. Therefore, we settle on this model and recommend it for deployment for the task.  
 
 
 ### Data Gathering
@@ -71,14 +70,12 @@
 
 ### Model Evaluation
    
-   We estimate our models accuracy, misclassification rate, and precision to evaluate their performnce. After an initial cross-validation, scoring and predicting on the test set, we took the model to unseen data. Both models, but the SVM in particular, performed just as well as they did on the training and test data. Unlike the Logistic regressiona and the Naive Bayes, there is no clear evidence of overfitting. 
+   We evaluate our model's performance by analyzing its accuracy, misclassification rate, recall and precision. After an initial cross-validation, scoring and predicting on the test set, we took the model to unseen data (the validation set). The GB model performed just as well as it did on the training and test data. Unlike the Logistic regression, there is no clear evidence of overfitting. 
    
 
 ### Concluding Remarks
 
-   Using these models leaves us with the challenge of interpretability. That is, these kind of models, unlike logistic regressions and linear regressions, do not provide us with coefficients that can be easily interpreted. If our interest is to draw inference, then a logistic regression would be our best bet here. However, since the goal is not inference but accuracy, the lack of interpretation is not much of a problem. 
-   
-   The SVM classifier and GB model generalize well. However, the SVM classifier outperforms the GB classifier on the holdout set. Therefore, we settle on this model and recommend it for deployment for the task.     
+   Using these models leaves us with the challenge of interpretability. That is, these kind of models, unlike logistic regressions and linear regressions, do not provide us with coefficients that can be easily interpreted. If our interest is to draw inference, then a logistic regression would be our best bet here. However, since the goal is not inference but accuracy, the lack of interpretation is not much of a problem.      
 
    
    
